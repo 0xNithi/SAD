@@ -4,7 +4,16 @@ import java.io.PrintStream;
 
 public abstract class BookMetadataExporter extends BookCollection {
 
-    public void export(PrintStream stream) {
-        // Please implement this method. You may create additional methods as you see fit.
+    @Override
+    public void add(Book b) {
+        append(b);
     }
+
+    public void export(PrintStream stream) {
+        stream.print(getMetadataString());
+    }
+
+    public abstract String getMetadataString();
+
+    public abstract BookMetadataExporter append(Book b);
 }

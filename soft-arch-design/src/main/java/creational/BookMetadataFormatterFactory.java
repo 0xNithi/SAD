@@ -11,7 +11,7 @@ public class BookMetadataFormatterFactory {
 
         public final String value;
 
-        private Format(String value) {
+        Format(String value) {
             this.value = value;
         }
     }

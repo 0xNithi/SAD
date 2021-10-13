@@ -10,7 +10,7 @@ public class Book {
 
         public final String value;
 
-        private Metadata(String value) {
+        Metadata(String value) {
             this.value = value;
         }
 
@@ -19,10 +19,10 @@ public class Book {
         }
     }
 
-    private String ISBN;
-    private String title;
-    private String publisher;
-    private String[] authors;
+    private final String ISBN;
+    private final String title;
+    private final String publisher;
+    private final String[] authors;
 
     public Book(String isbn, String title, String publisher, String... authors) {
         this.ISBN = isbn;
